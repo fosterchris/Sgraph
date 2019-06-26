@@ -1,0 +1,9 @@
+#Don't track folders
+
+.idea/
+
+
+
+#Don't track files
+
+*.pyc
