@@ -3,9 +3,7 @@ from scipy.interpolate import spline
 import matplotlib.pyplot as plt
 import numpy as np
 import string
-
-def ConvertSAtoIA(input):
-    return np.array([int(y) for y in input])
+from helpers.helpers import Helpers
 
 def ConvertYMDtoYears(value):
 
@@ -21,7 +19,7 @@ x = ScrapeTableByRowCount("https://www.statsf1.com/en/statistiques/pilote/champi
 npX = np.array(x)
 byYear = npX[np.argsort(npX[:,1])]
 
-years = ConvertSAtoIA(byYear[:,1])
+years = Helpers.convert_array_strings_to_ints(byYear[:,1])
 ages = np.array([ConvertYMDtoYears(y) for y in byYear[:,3]])
 print(ages)
 
