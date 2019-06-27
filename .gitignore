@@ -1,7 +1,7 @@
 #Don't track folders
 
 .idea/
-
+venv/
 
 
 #Don't track files

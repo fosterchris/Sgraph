@@ -32,7 +32,7 @@ rolling_years = years[5:]
 years_smooth = np.linspace(rolling_years.min(), rolling_years.max(), 400)
 age_smooth = spline(rolling_years, rolling_ages, years_smooth)
 
-#plt.plot(rolling_years, rolling_ages, marker=">")
+plt.plot(rolling_years, rolling_ages, marker=">")
 plt.plot(years_smooth, age_smooth, 'red')
 plt.xlabel('Year')
 plt.ylabel('Age of winner')
