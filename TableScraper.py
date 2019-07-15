@@ -4,7 +4,7 @@ import lxml.html as lh
 
 def ScrapeTableByRowCount(url, column_count):
 
-    page = requests.get(url) #get page html
+    page = requests.get(url)
 
     doc = lh.fromstring(page.content)
 
